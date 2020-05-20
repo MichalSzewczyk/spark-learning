@@ -61,6 +61,7 @@ and reporting the state of the computation on that executor back to the driver n
 ![alt text](https://www.baeldung.com/wp-content/uploads/2017/10/Components-of-Spark.jpg)
 ### Spark Core
 Spark Core component is accountable for all the basic I/O functionalities, scheduling and monitoring the jobs on spark clusters, task dispatching, networking with different storage systems, fault recovery, and efficient memory management.
+Spark Core example [REF 1.1](https://github.com/MichalSzewczyk/spark-learning/blob/master/src/main/java/com/szewczykm/spark/architecture/Main.java)
 
 ### Spark SQL
 Spark SQL is a Spark module for structured data processing. It's primarily used to execute SQL queries. DataFrame constitutes the main abstraction for Spark SQL. Distributed collection of data ordered into named columns is known as a DataFrame in Spark.
