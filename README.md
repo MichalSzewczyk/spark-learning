@@ -54,6 +54,7 @@ The driver process runs your main() function, sits on a node in the cluster, and
 The executors are responsible for actually carrying out the work that the driver assigns them. 
 This means that each executor is responsible for only two things: executing code assigned to it by the driver, 
 and reporting the state of the computation on that executor back to the driver node.
+
 ![alt text](https://spark.apache.org/docs/latest/img/cluster-overview.png)
 
 ## Spark core components
