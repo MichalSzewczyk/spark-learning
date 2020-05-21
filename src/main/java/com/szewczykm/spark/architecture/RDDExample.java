@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
  * [REF 1.1]
  */
 
-public class Main {
+public class RDDExample {
     // Replace with your hadoop home dir
     private static final String HADOOP_HOME_DIR = "D:\\Coding\\hadoop-winutil";
     private static final int WHILE = 1000;
@@ -21,7 +21,7 @@ public class Main {
         JavaSparkContext context = configureSparkContext();
 
         JavaRDD<Integer> rdd = context.parallelize(new ArrayList<>(IntStream.range(1, 10000000).boxed().collect(Collectors.toList())));
-        double sumOfSquaredEvenNumbers = rdd.filter(Main::isEven).map(Math::sqrt).map(Main::sleepForAWhile).reduce(Double::sum);
+        double sumOfSquaredEvenNumbers = rdd.filter(RDDExample::isEven).map(Math::sqrt).map(RDDExample::sleepForAWhile).reduce(Double::sum);
         System.out.println("Spark Job execution result: " + sumOfSquaredEvenNumbers);
     }
 
